@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+}
+
+body{
+    background-color: black;
+    overflow: hidden;
+}
+
+li {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+li:first-child{
+    z-index: 2;
+} 
+li:nth-child(2){
+    z-index: 1;
+} 
+
+img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+}
+
+h1 {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+}
+
