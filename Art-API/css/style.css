@@ -29,7 +29,7 @@ li:nth-child(2){
 img{
     width: 100vw;
     height: 100vh;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 h1 {
