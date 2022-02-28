@@ -67,12 +67,60 @@ h1 {
   }
 
 
-  .menu {
-    background-color: red;
+  .menuButton {
     width: 50px;
     height: 50px;
     position: fixed;
     right: 0px;
     top: 0px;
     z-index: 100;
+    margin: 10px;
+}
+  
+  .menuButton:before,
+  .menuButton:after,
+  .menuButton div {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 6px;
+    border-radius: 3px;
+    margin: 7px 0;
+    transition: 0.5s;
+  }
+  .iconSwitch:before {
+    transform: translateY(12px) rotate(135deg);
+  }
+  .iconSwitch:after {
+    transform: translateY(-12px) rotate(-135deg);
+  }
+  .iconSwitch div {
+    transform: scale(0);
+  }
+
+
+
+.menu {
+    transition: all 1s;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    left: 50vw;
+    top: 0;
+    position: fixed;
+    z-index: 99;
+    padding: 10px;
+}
+
+.menuShow{
+    left: 0;
+}
+
+.menu h2 {
+    color: white;
+    font-size: 45px;
+}
+
+.menu p{
+    color: white;
 }

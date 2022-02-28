@@ -28,8 +28,8 @@ export function swipe(){
     }
   }
 
-  document.body.ontouchmove = myFunction;
-  document.body.ontouchstart = myFunction2;
-  document.body.ontouchend = myFunction3;
+  document.querySelector("ul").ontouchmove = myFunction;
+  document.querySelector("ul").ontouchstart = myFunction2;
+  document.querySelector("ul").ontouchend = myFunction3;
 
 }

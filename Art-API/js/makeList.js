@@ -4,7 +4,9 @@ export function makeList(data) {
     for (var key in artList) {
         const li = document.createElement("li");
         const img = document.createElement("img");
-        document.querySelector("ul").appendChild(li);
+        const ul = document.querySelector("ul")
+        ul.innerHTML = '';
+        ul.appendChild(li);
         img.src = data.artObjects[key].webImage.url.slice(0, -3)+"=s3000";
         li.appendChild(img);
         const title = document.createElement("h1");
