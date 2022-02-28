@@ -2,6 +2,7 @@ import {getData} from './getData.js'
 import {makeList} from './makeList.js'
 import {swipe} from './swipe.js'
 import {menu,filter} from './menu.js'
+import {getNames} from './getNames.js'
 
 // Open close menu
 menu();
@@ -13,3 +14,5 @@ getData().then(data=>{
 })
 
 swipe();
+
+getNames();
