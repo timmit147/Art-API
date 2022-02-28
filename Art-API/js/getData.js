@@ -13,7 +13,18 @@ export  function getData(filter) {
     })
     .then(function (data) {
         // This is the JSON from our response'
-        console.log(data);
+
+        let allPainters = [];
+
+        console.log(data)
+
+        data.artObjects.forEach(item => {
+            allPainters.push(item.principalOrFirstMaker)
+        })
+
+        let unique = [...new Set(allPainters)];
+
+        console.log(unique);
             return data;
     })
     .catch(function (err) {
