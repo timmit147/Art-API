@@ -22,14 +22,14 @@ export function swipe(){
   }
 
   async function myFunction3(){
-    if(startY-100 > moveY){
+    if((startY-100 > moveY) && (swipeAmounth < listItems.length-1)){
       swipeAmounth++;
         // Loop through the NodeList object.
         for (let i = 0; i <= listItems.length - 1; i++) {
             listItems[i].style.marginBottom = ""+(swipeAmounth * 100)+"vh";
         }
     }
-    if(startY+100 < moveY){
+    if((startY+100 < moveY) && (swipeAmounth > 0)){
       swipeAmounth--;
       for (let i = 0; i <= listItems.length - 1; i++) {
         listItems[i].style.marginBottom = ""+(swipeAmounth * 100)+"vh";

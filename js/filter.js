@@ -3,7 +3,7 @@ import {makeList} from './makeList.js'
 
 // Get API data from rijksmuseum
 export  function filterArtist(filter) {
-   return fetch('https://www.rijksmuseum.nl/api/nl/collection/?key=hkKbTt5W&ps=99').then(function (response) {
+   return fetch('https://www.rijksmuseum.nl/api/nl/collection/?key=hkKbTt5W&ps=100').then(function (response) {
         // The API call was successful!
         return response.json();
     })
