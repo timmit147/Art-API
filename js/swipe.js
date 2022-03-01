@@ -8,6 +8,9 @@ export function swipe(){
   
   var startY;
   var moveY; 
+  var swipeAmounth = 0;
+  const ul = document.querySelector('ul');
+  const listItems = ul.getElementsByTagName('li');
 
   function myFunction2(){
     startY = event.touches[0].clientY;
@@ -15,11 +18,8 @@ export function swipe(){
 
   function  myFunction(){
     moveY = event.touches[0].clientY;
-  }
 
-var swipeAmounth = 0;
-const ul = document.querySelector('ul');
-const listItems = ul.getElementsByTagName('li');
+  }
 
   async function myFunction3(){
     if(startY-100 > moveY){

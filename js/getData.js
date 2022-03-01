@@ -2,12 +2,12 @@
 export  function getData(filter) {
     var Addfilter;
     if(filter == undefined){
-        Addfilter = "key=hkKbTt5W";
+        Addfilter = "key=hkKbTt5W&ps=99";
     }
     else{
         Addfilter = filter;
     }
-   return fetch('https://www.rijksmuseum.nl/api/nl/collection/?'+Addfilter+'').then(function (response) {
+   return fetch('https://www.rijksmuseum.nl/api/nl/collection/?'+Addfilter).then(function (response) {
         // The API call was successful!
         return response.json();
     })

@@ -2,8 +2,8 @@ import {getData} from './getData.js'
 import {makeList} from './makeList.js'
 
 // Get API data from rijksmuseum
-export  function getNames(filter) {
-   return fetch('https://www.rijksmuseum.nl/api/nl/collection/?key=hkKbTt5W&ps=999').then(function (response) {
+export  function filterArtist(filter) {
+   return fetch('https://www.rijksmuseum.nl/api/nl/collection/?key=hkKbTt5W&ps=99').then(function (response) {
         // The API call was successful!
         return response.json();
     })
@@ -20,7 +20,7 @@ export  function getNames(filter) {
 
         document.getElementById('selectNumber').addEventListener('change', function() {
             console.log('You selected: ', this.value);
-            getData("key=hkKbTt5W&involvedMaker="+this.value.replace(/\s+/g, '+')).then(data=>{
+            getData("key=hkKbTt5W&ps=100&involvedMaker="+this.value.replace(/\s+/g, '+')).then(data=>{
                 makeList(data);
             })
           });
