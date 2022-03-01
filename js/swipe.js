@@ -17,14 +17,23 @@ export function swipe(){
     moveY = event.touches[0].clientY;
   }
 
+var swipeAmounth = 0;
+const ul = document.querySelector('ul');
+const listItems = ul.getElementsByTagName('li');
+
   async function myFunction3(){
     if(startY-100 > moveY){
-        console.log("test");
-        document.querySelector("ul > li").style.bottom = "100vh";
-        await delay(2);
-        document.querySelector("ul > li:first-child").style.zIndex = "1";
-        document.querySelector("ul > li:nth-child(2)").style.zIndex = "2";
-        document.querySelector("ul > li").remove();
+      swipeAmounth++;
+        // Loop through the NodeList object.
+        for (let i = 0; i <= listItems.length - 1; i++) {
+            listItems[i].style.marginBottom = ""+(swipeAmounth * 100)+"vh";
+        }
+    }
+    if(startY+100 < moveY){
+      swipeAmounth--;
+      for (let i = 0; i <= listItems.length - 1; i++) {
+        listItems[i].style.marginBottom = ""+(swipeAmounth * 100)+"vh";
+    }
     }
   }
 

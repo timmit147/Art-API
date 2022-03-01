@@ -7,6 +7,15 @@ body{
     overflow: hidden;
 }
 
+ul {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
 li {
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
@@ -17,6 +26,8 @@ li {
     left: 0;
     bottom: 0;
     z-index: 0;
+    height: 100vh;
+    width: 100vw;
 }
 
 li:first-child{
@@ -53,6 +64,7 @@ h1 {
     height: 120px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
+    z-index: -1;
   }
 
   /* Safari */
@@ -99,13 +111,12 @@ h1 {
   }
 
 
-
 .menu {
     transition: all 1s;
     background-color: black;
     width: 100vw;
     height: 100vh;
-    left: 50vw;
+    left: 100vw;
     top: 0;
     position: fixed;
     z-index: 99;
