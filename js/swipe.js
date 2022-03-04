@@ -1,4 +1,4 @@
-// Swipe items in list
+// Swipe items in list (swipe up and down)
 export function swipe(){
   function delay(n){
     return new Promise(function(resolve){
