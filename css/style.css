@@ -33,6 +33,7 @@ li {
 li:first-child{
     z-index: 2;
 } 
+
 li:nth-child(2){
     z-index: 1;
 } 
@@ -50,7 +51,6 @@ h1 {
     color: wheat;
     padding: 20px;
 }
-
 
 .loader {
     position: absolute;
@@ -78,7 +78,6 @@ h1 {
     100% { transform: rotate(360deg); }
   }
 
-
   .menuButton {
     width: 50px;
     height: 50px;
@@ -100,16 +99,18 @@ h1 {
     margin: 7px 0;
     transition: 0.5s;
   }
+
   .iconSwitch:before {
     transform: translateY(12px) rotate(135deg);
   }
+
   .iconSwitch:after {
     transform: translateY(-12px) rotate(-135deg);
   }
+
   .iconSwitch div {
     transform: scale(0);
   }
-
 
 .menu {
     transition: all 1s;
