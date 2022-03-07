@@ -52,6 +52,7 @@ Menu
 - [x] Filteren op kunstenaar
 - [x] Swipen van lijst
 - [X] Modules toevoegen
+- [ ] Filter lijst reset swipe
 - [ ] Filter aanpassen dat het routes gebruikt
 - [ ] Loading, Error, Empty state toevoegen
 - [ ] Swipen smooth maken
