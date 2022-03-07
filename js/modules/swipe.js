@@ -12,16 +12,16 @@ export function swipe(){
   const ul = document.querySelector('ul');
   const listItems = ul.getElementsByTagName('li');
 
-  function myFunction2(){
+  function ontouchstart(){
     startY = event.touches[0].clientY;
   }
 
-  function  myFunction(){
+  function  ontouchmove(){
     moveY = event.touches[0].clientY;
 
   }
 
-  async function myFunction3(){
+  async function ontouchend(){
     if((startY-100 > moveY) && (swipeAmounth < listItems.length-1)){
       swipeAmounth++;
         // Loop through the NodeList object.
@@ -36,9 +36,8 @@ export function swipe(){
     }
     }
   }
-
-  document.querySelector("ul").ontouchmove = myFunction;
-  document.querySelector("ul").ontouchstart = myFunction2;
-  document.querySelector("ul").ontouchend = myFunction3;
+  document.querySelector("ul").ontouchstart = ontouchstart;
+  document.querySelector("ul").ontouchmove = ontouchmove;
+  document.querySelector("ul").ontouchend = ontouchend;
 
 }

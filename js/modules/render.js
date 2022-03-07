@@ -1,6 +1,6 @@
 // Make a list with art
 export function makeList(data) {
-    console.log(data.artObjects);
+    // console.log(data.artObjects);
     const artList = data.artObjects;
     var i = 0;
     const ul = document.querySelector("ul")
@@ -15,10 +15,20 @@ export function makeList(data) {
         if(data.artObjects[key].webImage){
         img.src = data.artObjects[key].webImage.url.slice(0, -3)+"=s3000";
         }
-        li.appendChild(img);
+        if(img){
+            li.appendChild(img);
+        }
         const title = document.createElement("h1");
+        if(title){
+            li.appendChild(title);
+        }
+        else{
+            li.appendChild("Geen title");
+        }
         li.appendChild(title);
         title.innerHTML = data.artObjects[key].title;
         i++;
+        // Stop loading state
+        document.querySelector(".loading").style.display = "none";
     }
 }
