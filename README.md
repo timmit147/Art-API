@@ -76,6 +76,8 @@ url.slice(0, -3) zorgt er voor dat de laatste letters van de url verwijdert word
 
 ## Activity diagram
 
+![iPhone 12 Pro Max – 14](https://user-images.githubusercontent.com/29665951/157256361-36206d8b-1d18-40d3-a1a6-cb8bef519d48.png)
+
 ## To do list
 
 - [x] API data ophalen
