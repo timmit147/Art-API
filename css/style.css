@@ -130,7 +130,7 @@ h1 {
     position: fixed;
     right: 0px;
     top: 0px;
-    z-index: 9999999;
+    z-index: 999999999999;
     margin: 10px;
 }
   
@@ -166,7 +166,7 @@ h1 {
     left: 100vw;
     top: 0;
     position: fixed;
-    z-index: 9999;
+    z-index: 999999999;
     padding: 10px;
 }
 

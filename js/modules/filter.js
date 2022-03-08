@@ -32,7 +32,9 @@ export  function filterArtist(filter) {
                         makeList(data);
                     })
                     const menu = document.querySelector(".menu");
+                    const menuButton = document.querySelector(".menuButton");
                     menu.classList.toggle("menuShow");
+                    menuButton.classList.toggle("iconSwitch");
 
             });
 

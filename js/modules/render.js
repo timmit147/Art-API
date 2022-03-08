@@ -17,7 +17,7 @@ export function makeList(data) {
         // console.log(amounth);
         li.style.bottom = amounth+'vh';
         if(data.artObjects[key].webImage){
-            img.src = data.artObjects[key].webImage.url.slice(0, -3)+"=s3000";
+            img.src = data.artObjects[key].webImage.url.slice(0, -3)+"=s500";
         }
         else{
             noImage.style.display = "block";
