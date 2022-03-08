@@ -6,9 +6,9 @@ export function swipe(){
     });
   }
   
-  var startY;
-  var moveY; 
-  var swipeAmounth = 0;
+  let startY;
+  let moveY; 
+  let swipeAmounth = 0;
   const ul = document.querySelector('ul');
   const listItems = ul.getElementsByTagName('li');
 

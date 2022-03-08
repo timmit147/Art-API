@@ -1,3 +1,4 @@
+import {swipe} from './swipe.js'
 // Make a list with art
 export function makeList(data) {
     // console.log(data.artObjects);
@@ -7,17 +8,22 @@ export function makeList(data) {
     ul.innerHTML = '';
     for (var key in artList) {
         const li = document.createElement("li");
+        const noImage = document.createElement("div");
+        noImage.innerHTML = "Geen afbeelding";
+        li.appendChild(noImage);
         const img = document.createElement("img");
         ul.appendChild(li);
         const amounth = -100 * i;
         // console.log(amounth);
         li.style.bottom = amounth+'vh';
         if(data.artObjects[key].webImage){
-        img.src = data.artObjects[key].webImage.url.slice(0, -3)+"=s3000";
+            img.src = data.artObjects[key].webImage.url.slice(0, -3)+"=s3000";
         }
-        if(img){
-            li.appendChild(img);
+        else{
+            noImage.style.display = "block";
         }
+
+        li.appendChild(img);
         const title = document.createElement("h1");
         if(title){
             li.appendChild(title);
@@ -31,4 +37,5 @@ export function makeList(data) {
         // Stop loading state
         document.querySelector(".loading").style.display = "none";
     }
+    swipe();
 }

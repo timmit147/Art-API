@@ -25,24 +25,32 @@ export  function filterArtist(filter) {
             let unique = [...new Set(allPainters)];
 
             document.getElementById('selectNumber').addEventListener('change', function() {
+                window.location = '#'+this.value+'';
                     console.log('You selected: ', this.value);
                     getData("key=hkKbTt5W&ps=100&involvedMaker="+this.value.replace(/\s+/g, '+'))
                     .then(data=>{
                         makeList(data);
                     })
+                    const menu = document.querySelector(".menu");
+                    menu.classList.toggle("menuShow");
 
             });
 
             
 
 
-            for(var i = 0; i < unique.length; i++) {
+            for(let i = 0; i < unique.length; i++) {
                 var opt = unique[i];
                 var el = document.createElement("option");
                 el.textContent = opt;
                 el.value = opt;
                 document.getElementById("selectNumber").appendChild(el);
+                if(location.hash){
+                    console.log(location.hash);
+                    document.querySelector(".defaultOption").innerHTML = location.hash.replaceAll('#', '').replaceAll('%20', ' ');
+                }
             }
+
 
         })
         .catch(function (err) {

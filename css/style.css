@@ -16,6 +16,16 @@ ul {
   overflow: hidden;
 }
 
+li > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: red;
+  display: none;
+}
+
 li {
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
@@ -34,6 +44,17 @@ li:first-child{
     z-index: 2;
 } 
 
+li:first-child:after{
+  content: "Rijksmuseum kunst";
+  z-index: 99999999;
+  position: fixed;
+  background-color: black;
+  left: 0;
+  padding: 20px;
+  font-size: 1.8em;
+  color: white;
+}
+
 li:nth-child(2){
     z-index: 1;
 } 
@@ -50,7 +71,7 @@ h1 {
     background-color: black;
     color: wheat;
     padding: 20px;
-    font-size: 3rem;
+    font-size: 1.8rem;
 }
 
 .loading, .error {
@@ -161,4 +182,21 @@ h1 {
 .menu p{
     color: white;
     font-size: 2rem;
+    padding: 10px 0px;
+}
+
+select#selectNumber {
+  font-size: 1.2rem;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.tutorial{
+  background-color: red;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 99999999;
+  left: 0;
+  top: 0;
 }
